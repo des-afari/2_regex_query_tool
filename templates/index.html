@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}Match{% endblock %}
+
+{% block content %}
+<main>
+    <p class="font-bold h-[25px] text-center bg-green-500 text-white">Match and Substitute Text</p>
+    <form action="POST" class="flex flex-col p-6">
+        {% csrf_token %}
+        {{regex_form}}
+        <button class="bg-green-500 text-white font-bold p-3">replace</button>
+    </form>
+</main>
+{% endblock %}
+
+{% block style %}
+<style>
+    form{
+        height: calc(100vh - 25px);
+    }
+
+    textarea, input[type='text']{
+        margin-top: 4px;
+        margin-bottom: 16px;
+        resize: none;
+        padding: .2rem .4rem;
+    }
+
+    textarea[name='text_string']{
+        height: 100%;
+    }
+
+    textarea[name='substitution']{
+        height: 30%;
+    }
+</style>
+{% endblock %}

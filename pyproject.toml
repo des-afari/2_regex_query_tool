@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "2-regex-query-tool"
+version = "0.1.0"
+description = ""
+authors = ["Desmond Afari <afaridesmond@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "2_regex_query_tool"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^0.21.1"
+django = "^4.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+django-browser-reload = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
